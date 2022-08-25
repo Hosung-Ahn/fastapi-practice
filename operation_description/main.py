@@ -11,7 +11,8 @@ def get_hello() :
 # get_blog_id 가 먼저 실행된다. 그결과 all 은 int 가 아니므로 이는 url request 에 부합하지 않아서 오류를 발생시킨다.
 @app.get('/blog/all',
          tags=['blog'],
-         summary="retrive all blogs")
+         summary="retrive all blogs",
+         response_description="This is available blogs")
 def get_all_blogs(page = 1, page_size: Optional[int] = None) :
     '''
         Summary : this function retirve all blogs
